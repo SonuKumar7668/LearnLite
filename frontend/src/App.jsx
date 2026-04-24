@@ -11,6 +11,10 @@ import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Notes from "./pages/Notes";
+import StudentDoubts from "./pages/StudentDoubts";
+import TeacherDoubts from "./pages/TeacherDoubts";
+import PomodoroTimer from "./pages/PomodoroTimer";
+import Teachers from "./pages/Teachers";
 import { AuthProvider } from "./context/AuthContext";
 export const BACKEND_URL = "http://localhost:3000/api";
 
@@ -24,6 +28,22 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/teachers" element={<Teachers/>} />
+          <Route path="/pomodoro" element={
+          <ProtectedRoute>
+            <PomodoroTimer />
+          </ProtectedRoute>
+        } />
+        <Route path="/doubts" element={
+          <ProtectedRoute>
+            <StudentDoubts />
+          </ProtectedRoute>
+        } />
+        <Route path="/teacher-doubts" element={
+          <ProtectedRoute>
+            <TeacherDoubts />
+          </ProtectedRoute>
+        } />
         <Route path="/features" element={
           <ProtectedRoute>
             <Features />

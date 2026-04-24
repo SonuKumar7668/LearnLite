@@ -17,6 +17,9 @@ export default function Header() {
     { label: "Chat", path: "/chat" },
     { label: "Quiz", path: "/quiz" },
     { label: "Notes", path: "/notes" },
+    { label: "Doubts", path: "/doubts" },
+    { label: "Teachers", path: "/teachers" },
+    { label: "Study-timer", path: "/pomodoro" },
   ];
 
   return (
